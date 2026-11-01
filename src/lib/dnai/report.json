@@ -1,0 +1,71 @@
+{
+  "model": "dnai-micro",
+  "status": "trained",
+  "note": "DN-AI Micro is a small Transformer fit to the project's original seed set. Train loss can be very low while held-out wordings stay weak. It is not a commercial LLM and it does not call third-party chatbot APIs.",
+  "train": {
+    "steps": 360,
+    "seed": 11,
+    "train_loss": 0.1413,
+    "val_loss": 7.9866,
+    "val_perplexity": 2941.414,
+    "train_rows": 67,
+    "val_rows": 4,
+    "tokens_seen_estimate": 69120,
+    "seconds": 26.7
+  },
+  "arch": {
+    "vocab_size": 1268,
+    "d_model": 128,
+    "n_layer": 4,
+    "n_head": 4,
+    "d_ff": 384,
+    "max_seq": 136,
+    "rope_theta": 10000.0
+  },
+  "vocab_size": 1268,
+  "samples": [
+    {
+      "prompt": "Xin chào",
+      "greedy": "Chào bạn. Mình là DN-AI. Bạn muốn nghĩ một bài, viết một đoạn, hay gỡ một đoạn code?",
+      "greedy_logprob": 0.0,
+      "sample": "Chào bạn. Mình là DN-AI. Bạn muốn nghĩ một bài, viết một đoạn, hay gỡ một đoạn code?",
+      "sample_logprob": 0.0
+    },
+    {
+      "prompt": "DN-AI là gì?",
+      "greedy": "DN-AI là nền tảng AI tự phát triển, với slogan Think Smarter. Solve Anything. Mình giúp chat, học, viết, đọc tài liệu và phân tích dữ liệu bằng mô hình riêng của dự án.",
+      "greedy_logprob": 0.0,
+      "sample": "DN-AI là nền tảng AI tự phát triển, với slogan Think Smarter. Solve Anything. Mình giúp chat, học, viết, đọc tài liệu và phân tích dữ liệu bằng mô hình riêng của dự án.",
+      "sample_logprob": -0.02
+    },
+    {
+      "prompt": "Bạn có nhìn được ảnh không?",
+      "greedy": "Chưa. DN-AI Micro chỉ xử lý chữ. Nếu bạn gửi ảnh, mình sẽ nói thẳng là module vision chưa được huấn luyện, và không đoán nội dung bức ảnh.",
+      "greedy_logprob": 0.0,
+      "sample": "Chưa. DN-AI Micro chỉ xử lý chữ. Nếu bạn gửi ảnh, mình sẽ nói thẳng là module vision chưa được huấn luyện, và không đoán nội dung bức ảnh.",
+      "sample_logprob": -0.013
+    },
+    {
+      "prompt": "What is self-attention?",
+      "greedy": "Transformer đổi token thành vector, gắn vị trí bằng RoPE, rồi chồng các lớp self-attention nhiều đầu và feed-forward. Khi sinh chữ, mô hình nhân quả chỉ được nhìn các token đã có.",
+      "greedy_logprob": 0.0,
+      "sample": "Transformer đổi token thành vector, gắn vị trí bằng RoPE, rồi chồng các lớp self-forward.",
+      "sample_logprob": -0.184
+    },
+    {
+      "prompt": "Name the planets in order.",
+      "greedy": "Tám hành tinh, với slogan Think Smarter.",
+      "greedy_logprob": 0.0,
+      "sample": "bộ, Thiên Vương.",
+      "sample_logprob": -1.767
+    },
+    {
+      "prompt": "một câu chưa có trong tập huấn luyện về công thức nấu phở",
+      "greedy": "Với-party chatbot môi trường tới model server đừng dọn cả hai câu phải có.",
+      "greedy_logprob": 0.0,
+      "sample": "Checkpoint. Chu vi để máy hai câu xử lý chữ hoặc nên nói chỉ bị mạch hội thoại.",
+      "sample_logprob": -1.468
+    }
+  ],
+  "param_count": 818816
+}
